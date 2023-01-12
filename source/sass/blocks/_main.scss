@@ -1,0 +1,209 @@
+.main {
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  background-image: url('../../img/main/main-overlay.jpg');
+  background-repeat: no-repeat;
+  // background-position: 100%;
+  background-size: cover;
+  &__container {
+    padding: rem(48) rem(47) rem(43);
+  }
+  &__poster {
+    border-radius: 25px;
+    background-image: url('../../img/main/main-poster.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-bottom: rem(24);
+  }
+  &__poster-inner {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    padding: rem(48) .9375rem rem(36);
+  }
+  &__title {
+    text-align: center;
+    color: var(--clr-light-400);
+    text-transform: uppercase;
+    font-size: rem(24);
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  &__heading {
+    color: var(--clr-red-400);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: rem(60);
+    margin-bottom: rem(28);
+  }
+  &__action {
+    font-weight: 600;
+  }
+  &__navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: rem(42);
+  }
+  &__grid-heading {
+    margin-bottom: rem(50);
+    @include df;
+    justify-content: space-between;
+    span {
+      font-weight: 600;
+      font-size: rem(17);
+      &:nth-child(2) {
+        font-size: rem(20);
+        font-weight: 800;
+      }
+    }
+  }
+  &__grid-inner {
+    @include df;
+    justify-content: space-around;
+    grid-gap: rem(22);
+    margin-bottom: rem(48);
+    font-size: rem(14);
+    font-weight: 500;
+    color: #898a97;
+    span {
+      color: var(--clr-light-400);
+      text-transform: uppercase;
+      font-size: rem(26);
+      font-weight: 700;
+    }
+  }
+  &__grid-info {
+    span {
+      display: block;
+      margin-top: rem(5);
+    }
+  }
+  &__grid-icon {
+    width: rem(47);
+    height: rem(47);
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background-color: #1f2034;
+    flex: 0 0 auto;
+  }
+  &__grid-bet, .main__grid-player {
+    display: flex;
+    grid-gap: rem(10);
+    align-items: center;
+  }
+  &__lobby {
+    display: flex;
+    align-items: center;
+    grid-gap: rem(10);
+    color: #24263c;
+    font-weight: 600;
+    font-size: rem(20);
+    span {
+      color: var(--clr-red-400);
+      font-weight: 800;
+    }
+  }
+  &__lobby-btn {
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: rem(47) rem(44);
+    margin-bottom: rem(47);
+  }
+  &__grid-item {
+    border-radius: 25px;
+    flex: 1 1 22%;
+    background-image: url('../../img/main/main-grid-item-overlay.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: rem(27) rem(24) rem(23);
+  }
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 25px;
+    padding: rem(10) rem(11) rem(9.5);
+    background-color: #1a1a2a;
+  }
+  &__row-item {
+    position: relative;
+    max-height: rem(20);
+    &::before {
+      background-color: #a2ff00;
+      filter: blur(10px);
+      @include psevdo;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: rem(8);
+      height: rem(8);
+      z-index: 50;
+    }
+    span {
+      position: absolute;
+      width: rem(4);
+      height: rem(4);
+      display: block;
+      background-color: #a2ff00;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    img {
+      opacity: .4;
+    }
+  }
+  &__show-more {
+    cursor: pointer;
+    padding: rem(21) 0;
+    @include dfc;
+    grid-gap: rem(10);
+    background-color: #e9ebed;
+    border-radius: 25px;
+    span {
+      font-size: 1rem;
+      color: #24263c;
+      font-weight: 600;
+    }
+    img {
+      transition: all 700ms cubic-bezier(0.215, 0.610, 0.355, 1);
+    }
+    &:hover img {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+@include max-width(103.75em) {
+  .main {
+    &__poster {
+      position: relative;
+      background-size: cover;
+      background-position: right;
+      &::before {
+        @include psevdo;
+        top: 0;
+        left: 0;
+        background-color: #000;
+        opacity: .4;
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+        z-index: 1;
+      }
+    }
+    &__poster-inner {
+      position: relative;
+      z-index: 5;
+    }
+  }
+}

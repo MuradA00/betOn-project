@@ -1,0 +1,60 @@
+.header {
+  background-color: #15172d;
+  min-height: rem(80);
+  position: relative;
+  background-size: cover;
+  background-image: url('../../img/header/bg-header.png');
+  position: fixed;
+  z-index: 1000;
+  &__burger {
+    display: none;
+    grid-gap: .4rem;
+    span {
+      display: block;
+      width: rem(30);
+      border-radius: 5px;
+      height: rem(3);
+      background: var(--clr-red-400);
+    }
+  }
+  &__container {
+    width: 100%;
+    padding: 0 rem(18) 0 0;
+  }
+  &__body {
+    width: 100%;
+    @include dfc;
+    justify-content: space-between;
+  }
+  &__register {
+    @include dfc;
+    grid-gap: rem(17);
+  }
+}
+
+@include max-width(40.625em) {
+  .nav {
+    &__item {
+      min-height: 1.5rem !important;
+      min-width: 3.5rem !important;
+      &::before {
+        bottom: -.94rem !important;
+      }
+    }
+  }
+  .header {
+    @include df;
+    min-height: 3rem !important;
+    &__register {
+      display: none;
+    }
+    &__burger {
+      display: grid;
+    }
+  }
+  .sidebar {
+    &__container {
+      padding: 3rem 0 1.875rem !important;
+    }
+  }
+}

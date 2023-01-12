@@ -1,0 +1,46 @@
+:root {
+    /* -- Fonts --*/
+    --ff: 'Geometria', sans-serif;
+    // colors
+    --clr-light-400: #fff;
+    --clr-grey-btn: #3b3c4d;
+    --clr-yellow-400: #cc930c;
+    --clr-red-400: #d5443b;
+    --bg-sidebar: #181a31;
+    --bg-header: #1d1e30;
+    --bg-selected-toggle: #24253c;
+    --bg-selected-shadow: linear-gradient(to top, #cd373a 0%, #e9623e 100%);
+    --bg-light-btn: linear-gradient(to right, #e75f3e 0%, #cf393a 100%);
+    --bg-nav-bar: linear-gradient(to right, #d1513a 0%, #af3638 100%);
+    --light-btn-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.13);
+}
+
+.btn {
+  @include dfc;
+  grid-gap: rem(12);
+  justify-content: center;
+  border-radius: 25px;
+  padding: rem(13.5) rem(18);
+  color: var(--clr-light-400);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  transition: 400ms ease;
+  &:hover {
+    transform: translateY(rem(3));
+  }
+  &_grey {
+    background-color: var(--clr-grey-btn);
+  }
+  &_light {
+    background-image: var(--bg-light-btn);
+    box-shadow: var(--light-btn-shadow);
+  }
+  @include max-width(75em) {
+    font-size: rem(12);
+    padding: rem(10) rem(14);
+    img {
+      transform: scale(.7);
+    }
+  }
+}
+

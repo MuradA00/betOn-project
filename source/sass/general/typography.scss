@@ -1,0 +1,36 @@
+.general-title {
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(30px, 3.25vw, 52px);
+  line-height: 106%;
+  color: var(--general-title);
+}
+
+.general-text {
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(16px, 1.25vw, 20px);
+  line-height: 140%;
+  color: var(--general-text);
+}
+
+.bottom-line {
+  position: relative;
+    width: 100%;
+    padding-bottom: 40px;
+
+    &::before {
+      @include psevdo;
+      background-image: var(--subtitle-line);
+      background-repeat: no-repeat;
+      background-position: center;
+      bottom: 0;
+      height: 14px;
+      width: 60%;
+      left: 50%;
+      transform: translateX(-50%);
+
+    }
+}
