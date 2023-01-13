@@ -211,7 +211,7 @@
 @include max-width(37.5em) {
   .main {
     &__container {
-      padding: 2rem .8rem;
+      padding: 2rem .8rem !important;
     }
     &__lobby {
       font-size: rem(14);

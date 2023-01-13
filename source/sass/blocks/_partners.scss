@@ -22,6 +22,9 @@
   }
   &__inner {
     background-color: #13172c;
+    background-image: url('../../img/partners/partners-overlay.png');
+    background-repeat: no-repeat;
+    background-position: auto;
     border-radius: 25px;
     padding: rem(46) rem(57) rem(49) rem(48.5);
   }
@@ -178,6 +181,23 @@
           padding: 1rem 1.25rem;
         }
       }
+    }
+  }
+}
+
+@include max-width(37.5em) {
+  .partners {
+    &__heading {
+      font-size: 1rem;
+    }
+    &__breadcrumb {
+      margin-bottom: 1.5rem;
+    }
+    &__subheading {
+      font-size: rem(14);
+    }
+    &__inner {
+      padding: 2.875rem 1.2525rem 2.0625rem 1.25rem;
     }
   }
 }
