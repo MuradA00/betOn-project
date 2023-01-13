@@ -1,0 +1,36 @@
+.terms {
+  background-color: var(--clr-light-400);
+  height: 100%;
+  h1, h2, h3, h4, h5, h6{
+    font-size: 1rem;
+    font-weight: 700;
+    color: #c7403a;
+    margin-bottom: 1.75rem;
+  }
+  ol {
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    color: #24263c;
+    font-weight: 700;
+    margin-bottom: rem(0);
+    line-height: 180%;
+  }
+  &__inner {
+    div {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+@include max-width(37.5em) {
+  .terms {
+    h1, h2, h3, h4, h5, h6 {
+      margin-bottom: 1rem;
+    }
+    li {
+      font-size: rem(14);
+    }
+  }
+}

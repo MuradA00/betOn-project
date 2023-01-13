@@ -193,6 +193,11 @@
     &__breadcrumb {
       margin-bottom: 1.5rem;
     }
+    &__icon {
+      span {
+        font-size: 1rem;
+      }
+    }
     &__subheading {
       font-size: rem(14);
     }
