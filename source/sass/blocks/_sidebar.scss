@@ -116,7 +116,7 @@
     border-radius: 20px;
     margin: 0 2rem 0;
     background-color: #212238;
-    padding: rem(41) rem(40) rem(29);
+    padding: rem(41) rem(40) rem(15);
     position: relative;
   }
   &__support-image {
@@ -139,6 +139,26 @@
       font-weight: 800;
     }
   }
+  &__anti-hack {
+    padding: rem(17) rem(22) rem(10) rem(25);
+    margin: rem(26) 2rem 0;
+    @include df;
+    grid-gap: rem(14);
+    border-radius: 20px;
+    background-color: #212238;
+  }
+  &__anti-hack-inner {
+    font-size: 1rem;
+    font-weight: 700;
+    span {
+      font-size: rem(14);
+      color: #9899ae;
+      font-weight: 500;
+    }
+  }
+  &__anti-hack-icon {
+    flex: 0 0 auto;
+  }
 }
 
 @include max-width(85.375em) {
@@ -146,8 +166,18 @@
     &__logo {
       margin-bottom: 2rem;
     }
-    min-width: rem(70);
-    max-width: rem(70);
+    min-width: rem(80);
+    max-width: rem(80);
+    &__anti-hack {
+      background-color: transparent;
+      margin: 1rem auto 0;
+      padding: .625rem 0;
+      justify-content: center;
+      border-radius: 0;
+    }
+    &__anti-hack-inner {
+      display: none;
+    }
     &__media-logo {
       display: flex;
       justify-content: center;
@@ -170,6 +200,7 @@
       margin: 0;
     }
     &__online {
+      background-color: transparent;
       padding: 0;
       margin: 2rem auto 0 auto;
       border-radius: 0;
@@ -188,7 +219,7 @@
       justify-content: center;
     }
     &__column {
-      justify-content: unset;
+      justify-content: space-evenly;
     }
     &__toggle {
       padding: 0;
@@ -202,6 +233,152 @@
     }
     &__link-amount {
       display: none;
+    }
+  }
+}
+
+@include max-width(40.625em) {
+  .sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+    min-width: 100%;
+    max-width: 100%;
+    &__anti-hack {
+      display: none;
+    }
+    &__inner {
+      display: flex;
+      flex: 1;
+      height: fit-content;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      margin-right: 1rem;
+    }
+    &__container {
+      padding: .5rem 1rem !important;
+    }
+    &__wrapper {
+      @include df;
+    }
+    &__column {
+      width: 100%;
+      flex-direction: row;
+      align-items: center;
+    }
+    &__toggles {
+      grid-gap: .9375rem;
+    }
+    &__logo {
+      margin-bottom: 0;
+      height: fit-content;
+      position: absolute;
+      z-index: 100;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &__online {
+      width: 2.8125rem;
+      height: 2.8125rem;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      padding: 0;
+      background-color: #272941;
+    }
+    &__support-image {
+      width: rem(27);
+      height: rem(27);
+      img {
+        width: inherit;
+        height: inherit;
+      }
+      top: 0;
+    }
+    &__toggle {
+      width: 2.8125rem;
+      height: 2.8125rem;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background-color: #272941;
+      min-height: auto;
+      &::before {
+        left: 0;
+        top: -12px;
+        width: 100%;
+        height: rem(3);
+      }
+      &_selected {
+        &::before {
+          width: 100%;
+          height: rem(3);
+          left: 0;
+          top: -8px;
+        }
+      }
+    }
+    &__online {
+      margin-top: 0;
+    }
+    &__links, .sidebar__toggles {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@include max-width(31.25em) {
+  .sidebar {
+    &__container {
+      padding: .5rem rem(14) !important;
+    }
+    &__logo {
+      max-width: rem(30);
+    }
+    &__toggles,
+    .sidebar__links {
+      grid-gap: rem(12);
+    }
+    &__inner {
+      margin-right: rem(12);
+    }
+    &__toggle,
+    .sidebar__link-item,
+    .sidebar__online {
+      width: 2.35rem !important;
+      height: 2.35rem;
+      img {
+        display: block;
+        transform: scale(.9);
+      }
+    }
+  }
+}
+
+@include max-width(23.475em) {
+  .sidebar {
+    overflow: visible;
+    &__container {
+      padding: .5rem !important;
+    }
+    &__toggles, .sidebar__links {
+      grid-gap: rem(12);
+    }
+    &__inner {
+      margin-right: rem(12);
+    }
+    &__logo {
+      width: rem(40);
+      height: rem(40);
+      max-width: 100%;
+      background-color: #15172d;
+      border-radius: 50%;
+      padding: .5rem;
+      top: -1.15rem;
     }
   }
 }

@@ -22,3 +22,17 @@
     }
   }
 }
+
+@include max-width(75em) {
+  .footer {
+    &__row {
+      grid-gap: 1.5rem;
+    }
+    &__container {
+      padding: 1.5rem 1rem;
+    }
+    &__copy {
+      font-size: rem(12);
+    }
+  }
+}

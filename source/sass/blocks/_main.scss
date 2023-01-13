@@ -207,3 +207,53 @@
     }
   }
 }
+
+@include max-width(37.5em) {
+  .main {
+    &__container {
+      padding: 2rem .8rem;
+    }
+    &__lobby {
+      font-size: rem(14);
+      align-items: center;
+      grid-gap: .4rem;
+    }
+    &__lobby-btn {
+      grid-gap: rem(5);
+      padding: rem(5) rem(10);
+    }
+    &__title {
+      margin-inline: auto;
+      max-width: rem(300);
+      font-size: 1.25rem;
+      margin-bottom: rem(12);
+    }
+    &__heading {
+      margin-bottom: 1rem;
+      font-size: 2.5rem;
+    }
+    &__grid-heading {
+      margin-bottom: rem(25);
+    }
+    &__grid-item {
+      max-width: rem(375);
+      margin-inline: auto;
+    }
+    &__grid-inner {
+      margin-bottom: rem(25);
+    }
+    &__grid-icon {
+      width: 2rem;
+      height: 2rem;
+      img {
+        transform: scale(.8);
+      }
+    }
+    &__grid-info {
+      font-size: rem(12);
+      span {
+        font-size: 1.125rem;
+      }
+    }
+  }
+}
