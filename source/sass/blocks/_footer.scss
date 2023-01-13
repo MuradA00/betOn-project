@@ -36,3 +36,20 @@
     }
   }
 }
+
+@include max-width(37.5em) {
+  .footer {
+    &__copy {
+      max-width: rem(275);
+      text-align: center;
+      span {
+        margin-top: rem(5);
+        display: block;
+      }
+    }
+    &__row {
+      grid-gap: rem(15);
+      flex-direction: column;
+    }
+  }
+}
