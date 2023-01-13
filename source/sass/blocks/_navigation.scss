@@ -1,0 +1,138 @@
+.navigation {
+  margin-bottom: rem(33);
+  &__body {
+    @include dfcs;
+  }
+  &__state {
+    background-color: #1f2034;
+    border-radius: 25px;
+    @include df;
+    grid-gap: rem(15);
+    padding: rem(4) rem(15) rem(4) rem(4);
+  }
+  &__state-friends-icon {
+    background-color: #1b1c2e;
+    border-radius: 20px;
+    width: rem(55);
+    height: rem(55);
+    display: grid;
+    place-items: center;
+    img {
+      transition: all 400ms ease;
+    }
+    &:hover img {
+      transform: scale(.9);
+    }
+  }
+  &__online-text {
+    color: var(--clr-light-400);
+    font-size: rem(14);
+    margin-bottom: rem(2);
+    font-weight: 700;
+  }
+  &__amount {
+    @include df;
+    color: #727384;
+    font-size: rem(12);
+    font-weight: 500;
+    span:not(.navigation__online-number) {
+      margin-right: rem(9);
+      display: block;
+      width: rem(4);
+      height: rem(4);
+      box-shadow: 0 0 9px rgba(128, 180, 46, 0.78);
+      background-color: #7bab28;
+    }
+  }
+  &__online-number {
+    font-size: rem(14);
+    display: block;
+    margin: 0 rem(5);
+    color: #df533d;
+  }
+  &__dropdown {
+    flex: 0 0 auto;
+    background-color: #25263b;
+    border-radius: 10px;
+    width: rem(25);
+    height: rem(25);
+    @include dfc;
+    cursor: pointer;
+    &:hover span {
+      transform: rotate(90deg) scaleX(-1);
+    }
+    span {
+      margin-top: rem(1);
+      margin-left: rem(4);
+      display: block;
+      transition: all 400ms ease;
+      transform: rotate(90deg);
+      font-size: rem(19);
+    }
+  }
+}
+
+.tabs {
+  &__list {
+    display: flex;
+    align-items: center;
+    grid-gap: rem(36);
+  }
+  &__link {
+    font-size: rem(14);
+    color: #fff;
+    font-weight: 700;
+    transition: all 350ms ease;
+    &:hover {
+      color: var(--clr-red-400);
+    }
+    &_selected {
+      position: relative;
+      color: #df533d;
+      z-index: 100;
+      &::before {
+        @include psevdo;
+        background-color: #14152b;
+        border-radius: 25px;
+        width: rem(133);
+        height: rem(36);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+      }
+    }
+  }
+}
+
+@include max-width(81.25em) {
+  .navigation {
+    &__body {
+      flex-direction: column-reverse;
+      grid-gap: 1.5rem;
+      align-items: flex-start;
+    }
+  }
+  .tabs {
+    &__list {
+      flex-wrap: wrap;
+      grid-gap: 1rem 2.5rem;
+      justify-content: center;
+    }
+    &__link {
+      font-size: rem(12);
+      &::before {
+        width: 6.8rem;
+        height: 2rem;
+      }
+    }
+  }
+}
+
+@include max-width(40.625em) {
+  .navigation {
+    &__state {
+      margin-inline: auto;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.wallet {
+  &__row {
+    display: grid;
+    grid-template-columns: 0.7fr 1fr;
+    grid-gap: rem(34);
+  }
+  &__row-icon {
+
+  }
+}

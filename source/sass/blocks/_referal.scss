@@ -1,0 +1,116 @@
+.referal {
+  &__title {
+    margin-bottom: rem(35);
+  }
+  &__row-heading {
+    margin-bottom: rem(36);
+  }
+  &__row-block {
+    border-radius: 20px;
+    background-color: #16182e;
+    padding: rem(35) rem(36);
+  }
+  &__total-row {
+    @include df;
+    grid-gap: rem(54);
+  }
+  &__statistic-wrapper {
+    padding: 0 rem(28) rem(22) rem(35);
+    @include max-width(100em) {
+      padding: 0 0 0 rem(10);
+    }
+  }
+  &__total {
+    position: relative;
+    background-color: #202135;
+    border-radius: 20px;
+    display: flex;
+    padding: rem(27) rem(27) rem(22) rem(54);
+    flex-direction: column;
+    text-align: left;
+    img {
+      position: absolute;
+      left: rem(-28);
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    @include max-width(100em) {
+      padding: rem(15) rem(15) rem(15) rem(30);
+    }
+  }
+  &__total-amount {
+    font-size: rem(24);
+    text-transform: uppercase;
+    color: var(--clr-red-400);
+    font-weight: 800;
+  }
+  &__total-name {
+    color: #7c7d8e;
+    font-size: rem(14);
+    font-weight: 400;
+    @include max-width(100em) {
+      font-size: rem(12);
+    }
+  }
+  &__input {
+    background-color: #1a1b32;
+    border-radius: 25px;
+    padding: rem(13) 1rem rem(11) rem(24);
+    @include df;
+    grid-gap: 2rem;
+    justify-content: space-between;
+    margin-bottom: rem(31);
+    input {
+      background-color: transparent;
+      margin: 0;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      padding: 0;
+      color: #df533d;
+      &::placeholder {
+        font-size: rem(15);
+        color: #df533d;
+        font-weight: 500;
+      }
+    }
+  }
+  &__warning {
+    font-style: italic;
+    color: #2e3046;
+    font-size: rem(14);
+    font-weight: 500;
+  }
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr .77fr;
+  grid-gap: rem(31);
+}
+
+@include max-width(81.25em) {
+  .inner-block {
+    padding: 1.5rem;
+  }
+  .referal {
+    &__row-block {
+      padding: 1.5rem;
+    }
+  }
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@include max-width(37.5em) {
+  .referal {
+    &__total-row {
+      flex-direction: column;
+      grid-gap: 2rem;
+    }
+    &__warning {
+      font-size: rem(12);
+    }
+  }
+}

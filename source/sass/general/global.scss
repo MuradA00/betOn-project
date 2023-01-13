@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   color: var(--clr-light-400);
-  background-color: var(--bg-header);
+  background-color: #1d1e31;
   width: 100%;
   position: relative;
   font-family: inherit;
@@ -31,6 +31,21 @@ html {
   box-sizing: border-box;
 }
 
+.footer_dark {
+  .footer {
+    background-color: #1b1c2e;
+    .footer__copy {
+      color: #343549;
+      span {
+        color: #26273c;
+      }
+    }
+    .footer__dev-logo {
+      opacity: .2;
+    }
+  }
+}
+
 .grid-wrapper {
   display: flex;
   height: 100vh;
@@ -40,6 +55,26 @@ html {
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
+  }
+  &__container {
+    padding: rem(42) rem(47) rem(40);
+    @include max-width(62.5em) {
+      padding: rem(30) rem(16) rem(30);
+    }
+  }
+  &_logged-in {
+    .header__register {
+      display: none;
+    }
+    .header__login {
+      display: flex;
+    }
+    .header__container {
+      padding: 0;
+      @include max-width(56.25em) {
+        padding: 0 rem(17) 0 0;
+      }
+    }
   }
   &__inner {
     flex: 1;

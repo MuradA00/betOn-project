@@ -1,36 +1,18 @@
-.general-title {
-  font-family: var(--font-family);
-  font-style: normal;
-  font-weight: 400;
-  font-size: clamp(30px, 3.25vw, 52px);
-  line-height: 106%;
-  color: var(--general-title);
+.main-title {
+  @include df;
+  grid-gap: rem(14);
+  span {
+    color: var(--clr-light-400);
+    font-size: rem(18);
+    font-weight: 700;
+  }
 }
 
-.general-text {
-  font-family: var(--font-family);
-  font-style: normal;
-  font-weight: 400;
-  font-size: clamp(16px, 1.25vw, 20px);
-  line-height: 140%;
-  color: var(--general-text);
-}
-
-.bottom-line {
-  position: relative;
-    width: 100%;
-    padding-bottom: 40px;
-
-    &::before {
-      @include psevdo;
-      background-image: var(--subtitle-line);
-      background-repeat: no-repeat;
-      background-position: center;
-      bottom: 0;
-      height: 14px;
-      width: 60%;
-      left: 50%;
-      transform: translateX(-50%);
-
+@include max-width(81.25em) {
+  .main-title {
+    grid-gap: rem(8);
+    span {
+      font-size: rem(14);
     }
+  }
 }
