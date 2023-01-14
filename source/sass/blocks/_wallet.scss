@@ -4,7 +4,125 @@
     grid-template-columns: 0.7fr 1fr;
     grid-gap: rem(34);
   }
+  &__title {
+    margin-bottom: rem(34);
+  }
+  &__inner {
+    border-radius: 20px;
+    outline: 4px solid #1d1e31;
+  }
+  &__heading {
+    border-radius: 15px;
+    min-height: rem(140);
+    background-color: #16182e;
+    @include df;
+    justify-content: center;
+    grid-gap: rem(68);
+    padding: 0 rem(20);
+  }
+  &__balance {
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    font-size: rem(36);
+    font-weight: 900;
+    span {
+      color: #7c7d8e;
+      font-size: rem(12);
+      font-weight: 500;
+    }
+  }
+  &__btns {
+    @include df;
+    grid-gap: rem(20);
+    & > * {
+      font-weight: 600;
+    }
+  }
+  &__update {
+    padding: rem(25) rem(45) rem(35);
+  }
+  &__update-heading {
+    margin-bottom: rem(25);
+    @include df;
+    grid-gap: rem(11);
+    span {
+      font-weight: 500;
+      font-size: rem(15);
+    }
+  }
+  &__choose, .wallet__inputs-name {
+    color: #4f5063;
+    font-size: rem(14);
+    font-weight: 500;
+  }
+  &__choose {
+    margin-bottom: rem(17);
+  }
+  &__inputs {
+    margin-bottom: rem(33);
+  }
+  &__inputs-name {
+    margin-bottom: rem(8);
+    font-weight: 600;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: rem(18);
+    margin-bottom: rem(28);
+  }
   &__row-icon {
-
+    flex: 1 1 22%;
+    width: rem(106);
+    height: rem(69);
+    display: grid;
+    place-items: center;
+    outline: 3px solid #212136;
+    border-radius: 20px;
+    justify-content: center;
+    cursor: pointer;
+    transition: outline 350ms ease;
+    &:hover {
+      outline: 3px solid #d5563e;
+    }
+  }
+  &__inputs {
+    display: flex;
+    flex-direction: column;
+    grid-gap: rem(25);
+  }
+  &__inputs-item {
+    display: grid;
+    grid-gap: rem(12);
+    input {
+      font-size: rem(12);
+      color: var(--clr-light-400);
+      background-color: #191a2b;
+      border: 1px solid #1f2034;
+      border-radius: 10px;
+      padding: rem(18.5) rem(22);
+      &::placeholder {
+        font-size: inherit;
+        color: #3f4053;
+      }
+    }
+  }
+  &__payments {
+    @include df;
+    justify-content: space-between;
+  }
+  &__payments-info {
+    display: flex;
+    flex-direction: column;
+    color: #4f5063;
+    font-size: rem(13);
+    font-weight: 500;
+    span {
+      color: var(--clr-light-400);
+    }
+  }
+  &__btn {
+    flex: 0 0 auto;
   }
 }

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
 @@include('_head.html',{})
-
 <body>
-  <div class="grid-wrapper">
+  <div class="grid-wrapper grid-wrapper_logged-in footer_dark">
       @@include('_sidebar.html',{})
     <div class="grid-wrapper__content">
       @@include('_header.html',{})
-      <div class="grid-wrapper__inner">
-        @@include('_main.html',{})
+      <div class="grid-wrapper__inner grid-wrapper__container">
+        @@include('_navigation.html',{})
+        @@include('_notif.html',{})
       </div>
       @@include('_footer.html',{})
     </div>
@@ -16,5 +16,4 @@
   <script src="js/swiper.min.js"></script>
   <script src="js/common.js"></script>
 </body>
-
 </html>

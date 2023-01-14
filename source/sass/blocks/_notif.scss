@@ -1,0 +1,25 @@
+.notif {
+  &__title {
+      margin-bottom: rem(34);
+  }
+  &__column {
+    display: flex;
+    flex-direction: column;
+    grid-gap: rem(17);
+  }
+  &__column-item {
+    border-radius: 25px;
+    background-color: #16182e;
+    padding: rem(22.5) rem(28);
+  }
+  &__column-heading {
+    color: #67687b;
+    font-size: rem(14);
+    font-weight: 500;
+    margin-bottom: rem(5);
+  }
+  &__info {
+    font-weight: 500;
+    color: var(--clr-light-400);
+  }
+}
