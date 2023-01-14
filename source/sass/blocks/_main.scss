@@ -114,17 +114,30 @@
   &__grid {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     grid-gap: rem(47) rem(44);
     margin-bottom: rem(47);
   }
+
   &__grid-item {
     border-radius: 25px;
-    flex: 1 1 22%;
     background-image: url('../../img/main/main-grid-item-overlay.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     padding: rem(27) rem(24) rem(23);
+    position: relative;
+    overflow: hidden;
+    // &::before {
+    //   @include psevdo;
+    //   top: 0;
+    //   border-radius: 25px 25px 0px 0px;
+    //   left: 0;
+    //   width: 100%;
+    //   margin: -2px -2px 0px -2px;
+    //   box-shadow: inset 0px 1px 5px #000;
+    //   height: rem(80);
+    // }
   }
   &__row {
     display: flex;

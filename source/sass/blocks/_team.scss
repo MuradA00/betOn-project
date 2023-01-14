@@ -1,0 +1,118 @@
+.team {
+  .green-one {
+    color: #7eae25;
+  }
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    grid-gap: rem(26);
+  }
+  &__inner-item {
+    background-color: #16182e;
+    border-radius: 20px;
+    padding: 2rem rem(31) rem(30) rem(37);
+    background-image: url('../../img/team/dota-overlay.png');
+    background-repeat: no-repeat;
+    background-position: bottom left;
+  }
+  &__heading {
+    @include df;
+    justify-content: space-between;
+    margin-bottom: rem(27);
+  }
+  &__heading-row {
+    @include df;
+    grid-gap: rem(41);
+  }
+  &__inner-top {
+    @include df;
+    justify-content: space-between;
+    margin-bottom: rem(34);
+  }
+  &__inner-date {
+    color: #7c7d8e;
+    font-size: rem(16);
+    font-weight: 500;
+    span {
+      font-weight: 700;
+      color: var(--clr-light-400);
+    }
+  }
+  &__create {
+    text-transform: uppercase;
+  }
+  &__toggles {
+    @include df;
+    grid-gap: rem(13);
+  }
+  &__data {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  &__toggle {
+    padding: rem(11.5) rem(15.5);
+    border-radius: 25px;
+    background-color: #1d1e31;
+    font-size: rem(13);
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 400ms ease;
+    &_selected {
+      color: var(--clr-red-400);
+    }
+    &:hover {
+      color: var(--clr-red-400);
+    }
+  }
+  &__inner-name {
+    font-size: rem(20);
+    font-weight: 700;
+    color: var(--clr-red-400);
+  }
+  &__info {
+    font-weight: 600;
+    line-height: 200%;
+    p {
+      font-weight: inherit;
+      color: var(--clr-light-400);
+      span {
+        color: #ffb400;
+      }
+    }
+    color: #7c7d8e;
+    span {
+      color: var(--clr-light-400);
+    }
+  }
+}
+
+@include max-width(56.625em) {
+  .team {
+    &__inner-item {
+      padding: 1.5rem 1rem;
+    }
+    &__heading, .team__heading-row{
+      flex-direction: column;
+      grid-gap: 1rem;
+    }
+    &__inner-top {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__inner-date {
+      font-size: rem(12);
+    }
+    &__data {
+      flex-direction: column;
+    }
+    &__info {
+      font-size: rem(14);
+      width: 100%;
+      margin-bottom: rem(20);
+    }
+    &__details {
+      margin-inline: auto;
+    }
+  }
+}
