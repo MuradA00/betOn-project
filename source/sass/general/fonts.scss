@@ -1,4 +1,14 @@
 
+
+@font-face {
+  font-family: 'Jet-Set';
+  src: url('../../fonts/Jet Set.woff');
+  src: local('Jet-Set'), local('Jet-Set'),
+       url('../../fonts/Jet-Set.woff') format('woff'),
+       url('../../fonts/Jet Set.ttf') format('truetype');
+       font-weight: normal;
+}
+
 @font-face {
 	font-family: 'Geometria';
 	src: url('../../fonts/Geometria-Thin.eot');
@@ -131,46 +141,9 @@
 	font-style: normal;
 }
 
-@font-face {
-	font-family: 'Geometria';
-	src: url('../../fonts/Geometria-ThinItalic.eot');
-	src: local('Geometria ThinItalic'), local('Geometria-ThinItalic'),
-		url('../../fonts/Geometria-ThinItalic.eot?#iefix') format('embedded-opentype'),
-		url('../../fonts/Geometria-ThinItalic.woff') format('woff'),
-		url('../../fonts/Geometria-ThinItalic.ttf') format('truetype');
-	font-weight: 100;
-	font-style: italic;
-}
 
-@font-face {
-	font-family: 'Geometria';
-	src: url('../../fonts/Geometria-ExtraLightItalic.eot');
-	src: local('Geometria ExtraLightItalic'), local('Geometria-ExtraLightItalic'),
-		url('../../fonts/Geometria-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
-		url('../../fonts/Geometria-ExtraLightItalic.woff') format('woff'),
-		url('../../fonts/Geometria-ExtraLightItalic.ttf') format('truetype');
-	font-weight: 200;
-	font-style: italic;
-}
 
-@font-face {
-	font-family: 'Geometria';
-	src: url('../../fonts/Geometria-Light.eot');
-	src: local('Geometria Light'), local('Geometria-Light'),
-		url('../../fonts/Geometria-Light.eot?#iefix') format('embedded-opentype'),
-		url('../../fonts/Geometria-Light.woff') format('woff'),
-		url('../../fonts/Geometria-Light.ttf') format('truetype');
-	font-weight: 300;
-	font-style: normal;
-}
 
-@font-face {
-	font-family: 'Geometria';
-	src: url('../../fonts/Geometria-ExtraLight.eot');
-	src: local('Geometria ExtraLight'), local('Geometria-ExtraLight'),
-		url('../../fonts/Geometria-ExtraLight.eot?#iefix') format('embedded-opentype'),
-		url('../../fonts/Geometria-ExtraLight.woff') format('woff'),
-		url('../../fonts/Geometria-ExtraLight.ttf') format('truetype');
-	font-weight: 200;
-	font-style: normal;
-}
+
+
+

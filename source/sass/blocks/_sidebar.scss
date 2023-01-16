@@ -273,6 +273,9 @@
       grid-gap: .9375rem;
     }
     &__logo {
+      &:hover {
+        transform: translate(-50%, 0%);
+      }
       margin-bottom: 0;
       height: fit-content;
       position: absolute;

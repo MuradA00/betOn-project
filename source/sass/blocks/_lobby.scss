@@ -1,0 +1,337 @@
+.lobby {
+  background-color: var(--clr-light-400);
+  height: 100%;
+  &__container {
+    padding: 2.625rem 2.9375rem 2.5rem;
+    @include max-width(62.5em) {
+      padding: rem(30) rem(16) rem(30);
+    }
+  }
+  &__row-icon {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    &::before, &::after {
+      @include psevdo;
+      width: 40%;
+      height: rem(2);
+      background-color: var(--clr-red-400);
+      top: -5px;
+    }
+    &::before {
+      left: 0;
+    }
+    &::after {
+      right: 0;
+    }
+    span {
+      top: -8px;
+      position: absolute;
+      display: block;
+      width: rem(6);
+      height: rem(6);
+      border-radius: 2px;
+      background-color: var(--clr-red-400);
+    }
+  }
+  &__title {
+    color: #24263c;
+    font-size: rem(20);
+    font-weight: 600;
+    grid-gap: rem(7);
+    span {
+      color: #c93d3a;
+      font-weight: 800;
+    }
+  }
+  &__heading {
+    @include dfcs;
+    margin-bottom: rem(35);
+  }
+  &__options {
+    @include df;
+    grid-gap: rem(44);
+  }
+  &__mode {
+    color: #24263c;
+    font-weight: 700;
+    font-size: rem(20);
+    display: flex;
+    grid-gap: rem(10);
+    span {
+      font-size: rem(18);
+      color: var(--clr-light-400);
+      font-weight: 500;
+      background-color: var(--clr-red-400);
+      border-radius: 15px;
+      width: rem(47);
+      height: rem(27);
+      display: grid;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &__settings {
+    border-radius: 15px;
+    background-color: #e7e9ec;
+    color: #252840;
+    font-weight: 700;
+  }
+  &__inner {
+    display: grid;
+    grid-template-columns: .34fr auto .34fr;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background-image: url('../../img/lobby-page/block-overlay.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    &::before {
+      @include psevdo;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-image: url('../../img/lobby-page/lobby-image.png');
+      width: rem(587);
+      height: rem(365);
+      z-index: 5;
+    }
+  }
+  &__inner {
+    border-radius: 35px;
+  }
+  &__row-info-name {
+    font-size: rem(12);
+    font-weight: 500;
+    color: var(--clr-light-400);
+  }
+  &__row-info-rating {
+    font-size: rem(10);
+    font-weight: 500;
+    span {
+      color: var(--clr-red-400);
+    }
+  }
+  &__row-info-price {
+    color: #ffc600;
+    font-size: rem(10);
+    font-weight: 500;
+  }
+  &__team {
+
+    position: relative;
+    z-index: 15;
+    &_tt {
+      .lobby__team-heading {
+        justify-content: flex-end;
+        text-align: right;
+      }
+      .lobby__team-info {
+
+      }
+      .lobby__row {
+        justify-content: flex-end
+      }
+    }
+  }
+  &__team-heading {
+    @include df;
+    grid-gap: rem(21);
+    margin-bottom: rem(25);
+  }
+  &__team-info {
+    display: flex;
+    flex-direction: column;
+    font-size: rem(21);
+    font-weight: 500;
+    p {
+      font-size: rem(13);
+      color: var(--clr-light-400);
+      span {
+        color: #d74a3c;
+      }
+    }
+  }
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: rem(30);
+  }
+  &__row-item {
+    overflow: hidden;
+    width: rem(117);
+    height: rem(123);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 25px;
+    background-color: #1f2034;
+  }
+  &__result {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: rem(65);
+  }
+  &__map-name {
+    font-size: rem(31);
+    font-weight: 500;
+    text-align: center;
+    span {
+      font-weight: 700;
+      color: var(--clr-red-400);
+      display: block;
+      font-size: rem(10);
+    }
+  }
+  &__score {
+    color: var(--clr-light-400);
+    font-size: rem(56);
+    text-align: center;
+    font-family: 'Jet-Set', sans-serif;
+    font-weight: 700;
+    span {
+      display: block;
+      font-size: 1rem;
+      color: #aeafbe;
+      font-weight: 500;
+      font-family: var(--ff);
+    }
+  }
+  &__prize {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 1rem;
+  }
+  &__prize-inner {
+    color: #ffc600;
+    text-align: center;
+    font-size: rem(27);
+    font-weight: 800;
+    span {
+      font-weight: 500;
+      font-size: rem(14);
+      color: var(--clr-light-400);
+      display: block;
+    }
+  }
+}
+
+@include max-width(53.125em) {
+  .lobby {
+    &__heading {
+      justify-content: flex-start;
+      flex-direction: column;
+      grid-gap: 1.5rem;
+    }
+    &__options {
+      justify-content: space-between;
+      width: 100%;
+    }
+    &__title, .lobby__options {
+      margin-right: auto;
+    }
+  }
+}
+
+@include max-width(75em) {
+  .lobby {
+    &__team-heading {
+      flex-direction: column;
+      align-items: flex-start;
+      grid-gap: 0;
+    }
+    &__row-item {
+      width: rem(90);
+      height: rem(100);
+    }
+    &__row-image {
+      width: fit-content;
+      margin-inline: auto;
+      max-width: rem(32);
+    }
+    &__team-info {
+      font-size: rem(14);
+      span {
+        font-size: rem(12);
+      }
+    }
+    &__row-info-name {
+      font-size: .6rem;
+    }
+    &__row-info-rating {
+      font-size: .6rem;
+    }
+    &__map-name {
+      font-size: rem(25);
+    }
+    &__team {
+      &_tt {
+        .lobby__team-heading {
+          flex-direction: column-reverse;
+          align-items: flex-end;
+        }
+      }
+    }
+  }
+}
+
+@include max-width(37.5em) {
+  .lobby {
+    &__inner {
+      background-position: center;
+    }
+    &__title {
+      margin-left: auto;
+    }
+    &__icon {
+      max-width: rem(50);
+    }
+    &__options {
+      flex-direction: column;
+      justify-content: flex-start;
+      grid-gap: 1.5rem;
+    }
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      grid-gap: 4rem;
+    }
+    &__team {
+      &_tt {
+        .lobby__team-heading {
+          text-align: center;
+          align-items: center;
+        }
+        .lobby__row {
+          grid-gap: 1rem;
+          justify-content: center;
+        }
+        .lobby__icon {
+          transform: translateX(rem(-12));
+        }
+      }
+      &_ct {
+        display: flex;
+        grid-gap: 1rem;
+        flex-direction: column-reverse;
+      }
+    }
+    &__row {
+      grid-gap: 1rem;
+      justify-content: center;
+    }
+    &__team-heading {
+      text-align: center;
+      align-items: center;
+    }
+    &__result {
+      grid-gap: rem(30);
+    }
+  }
+}
