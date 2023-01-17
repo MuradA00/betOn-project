@@ -8,6 +8,12 @@
     place-items: center;
     position: relative;
     min-height: rem(80);
+    &_selected {
+      &::before {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+      }
+    }
     &::before {
       @include psevdo;
       bottom: rem(-3);

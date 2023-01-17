@@ -80,18 +80,15 @@ html {
   &__inner {
     flex: 1;
   }
-  &_partners {
-    .nav {
-      &__item {
-        &:nth-child(2) {
-          &::before {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      }
-    }
-  }
+  // &_partners {
+  //   .nav {
+  //     &__item {
+  //       &:nth-child(2) {
+
+  //       }
+  //     }
+  //   }
+  // }
 }
 
 

@@ -1,4 +1,9 @@
 .referal {
+  &__body {
+    display: flex;
+    flex-direction: column;
+    grid-gap: rem(36);
+  }
   &__title {
     margin-bottom: rem(35);
   }
@@ -80,6 +85,59 @@
     font-size: rem(14);
     font-weight: 500;
   }
+  &__table-wrapper {
+    background-color: #1d1e31;
+    padding: rem(35);
+    border-radius: 15px;
+  }
+  &__table-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: rem(22);
+    padding: 0 rem(15) 0 rem(20);
+  }
+  &__table-heading-item {
+    color: #7c7d8e;
+    font-size: rem(12);
+    font-weight: 500;
+    &:nth-child(1) {
+      flex: 0 0 rem(128);
+    }
+    &:nth-child(2) {
+      text-align: center;
+      flex: 0 0 rem(70);
+    }
+
+  }
+  &__table-row-item {
+    padding: rem(13.5) rem(15) rem(13.5) rem(18);
+    border-radius: 35px;
+    &:nth-child(even) {
+      background-color: #202135;
+    }
+    @include dfcs;
+    span {
+      color: var(--clr-light-400);
+      font-weight: 500;
+      font-size: rem(14);
+      text-align: center;
+
+      &:nth-child(3) {
+        flex: 0 0 rem(48.5);
+      }
+      &:nth-child(4) {
+        flex: 0 0 rem(135);
+      }
+      &:nth-child(5) {
+        flex: 0 0 rem(110);
+        text-align: right;
+      }
+    }
+  }
+  &__table-span_rating {
+    color: #ffb400 !important;
+  }
 }
 
 .row {
@@ -111,6 +169,74 @@
     }
     &__warning {
       font-size: rem(12);
+    }
+  }
+}
+
+@include max-width(60em) {
+  .referal {
+    &__table-heading-item {
+      font-size: rem(10);
+      &:nth-child(1) {
+        flex: 0 0 rem(91);
+      }
+      &:nth-child(2) {
+        flex: 0 0 rem(54);
+      }
+
+    }
+    &__table-wrapper {
+      padding: rem(15) rem(5);
+    }
+    &__inner {
+      padding: rem(20) rem(16);
+    }
+    &__table-row-item {
+      span {
+        font-size: rem(10);
+        &:nth-child(4) {
+          flex: 0 0 rem(100);
+        }
+        &:nth-child(5) {
+          flex: 0 0 rem(91);
+        }
+      }
+    }
+  }
+}
+
+@include max-width(37.5em) {
+  .referal {
+    &__table-row-item, .referal__table-heading {
+      grid-gap: rem(5);
+    }
+    &__table-heading-item {
+
+      &:nth-child(1) {
+        flex: 0 0 rem(65);
+      }
+      &:nth-child(4) {
+        flex: 0 0 rem(60);
+      }
+      &:nth-child(5) {
+        flex: 0 0 rem(58);
+        text-align: right;
+      }
+    }
+    &__table-row-item {
+      padding: rem(10);
+      span {
+        &:nth-child(1) {
+          max-width: rem(65);
+          text-align: left;
+        }
+        &:nth-child(4) {
+          flex: 0 0 rem(60);
+        }
+        &:nth-child(5) {
+          flex: 0 0 rem(58);
+        }
+      }
     }
   }
 }

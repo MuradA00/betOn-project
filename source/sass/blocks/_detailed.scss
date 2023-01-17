@@ -22,7 +22,7 @@
   &__row {
     display: flex;
     align-items: center;
-    grid-gap: rem(25);
+    grid-gap: rem(23);
     flex-wrap: wrap;
   }
   &__row-item {
@@ -34,7 +34,7 @@
     align-items: center;
     flex: 0 0 auto;
   }
-  &__info {
+  &__row-info {
     font-size: rem(24);
     color: var(--clr-light-400);
     font-weight: 700;
@@ -85,6 +85,8 @@
   }
   &__flex-item {
     flex: 1;
+    max-height: rem(365);
+    overflow-y: scroll;
   }
   &__flex-title {
     margin-bottom: rem(35);
@@ -111,6 +113,7 @@
     display: flex;
     flex-direction: column;
     grid-gap: rem(11);
+    overflow-y: scroll;
   }
   &__request-item {
     background-color: #1d1e31;
@@ -186,6 +189,7 @@
     }
     &_actions {
       color: #ff0042;
+      cursor: pointer;
     }
     &:nth-child(odd) {
       background-color: #202135;
@@ -194,6 +198,20 @@
       font-size: rem(14);
       text-align: center;
       font-weight: 500;
+    }
+  }
+  &__request {
+    position: relative;
+    &::before {
+      @include psevdo;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url('../../img/my-team-detailed/table-overlay.png');
+      z-index: -1;
     }
   }
 }
@@ -212,6 +230,16 @@
   }
 }
 
+@include max-width(81.25em) {
+  .detailed {
+    &__title {
+      p {
+        font-size: rem(14);
+      }
+    }
+  }
+}
+
 @include max-width(40.625em) {
   .detailed {
     &__request-item {
@@ -219,6 +247,17 @@
       align-items: center;
       text-align: center;
       grid-gap: 1rem;
+    }
+    &__row-info {
+      font-size: 1.125rem;
+      span {
+        font-size: rem(12);
+      }
+    }
+    &__notif {
+      p {
+        font-size: rem(12);
+      }
     }
     &__info {
       margin-left: 0;
@@ -230,6 +269,7 @@
       margin-right: auto;
     }
     &__table-inner-item {
+      padding: .8rem rem(15);
       span {
         font-size: rem(11);
       }
@@ -256,6 +296,34 @@
       }
       &:nth-child(4) {
         flex: 0 0 rem(113);
+      }
+    }
+  }
+}
+
+@include max-width(26.875em) {
+  .detailed {
+    &__table-inner-item {
+      span {
+        font-size: rem(10);
+        &:nth-child(4) {
+          max-width: rem(56);
+          text-align: right;
+        }
+      }
+    }
+    &__table-heading-item {
+      &:nth-child(1) {
+        flex: 0 0 rem(41);
+      }
+      &:nth-child(2) {
+        flex: 0 0 rem(50);
+      }
+      &:nth-child(3) {
+        flex: 0 0 rem(28);
+      }
+      &:nth-child(4) {
+        flex: 0 0 rem(56);
       }
     }
   }
