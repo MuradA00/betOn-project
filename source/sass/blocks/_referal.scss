@@ -207,11 +207,9 @@
 
 @include max-width(37.5em) {
   .referal {
-    &__table-row-item, .referal__table-heading {
-      grid-gap: rem(5);
-    }
     &__table-heading-item {
 
+      font-size: rem(10);
       &:nth-child(1) {
         flex: 0 0 rem(65);
       }
@@ -223,9 +221,14 @@
         text-align: right;
       }
     }
+    &__table-heading {
+      padding: 0 rem(10);
+      margin-bottom: rem(10);
+    }
     &__table-row-item {
       padding: rem(10);
       span {
+        font-size: rem(10);
         &:nth-child(1) {
           max-width: rem(65);
           text-align: left;
@@ -235,6 +238,34 @@
         }
         &:nth-child(5) {
           flex: 0 0 rem(58);
+        }
+      }
+    }
+  }
+}
+
+@include max-width(25em) {
+  .referal {
+    &__table-heading-item {
+      font-size: rem(9) !important;
+      &:nth-child(1) {
+        flex: 0 0 rem(58);
+      }
+      &:nth-child(2) {
+        flex: 0 0 rem(44);
+      }
+    }
+    &__table-row-item {
+      align-items: flex-end;
+      padding: 0.625rem rem(8) !important;
+      span {
+        font-size: rem(9) !important;
+        white-space: wrap;
+        &:nth-child(1) {
+          flex: 0 0 rem(40) !important;
+        }
+        &:nth-child(3) {
+          flex: 0 0 auto;
         }
       }
     }

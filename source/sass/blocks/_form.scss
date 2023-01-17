@@ -207,13 +207,20 @@
       font-size: rem(22);
     }
     &__links {
-      flex-direction: column;
+      justify-content: center;
     }
     &__info {
       display: grid;
+      font-size: rem(14);
+      span {
+        font-size: rem(10);
+      }
+    }
+    &__icon {
+      max-width: rem(25);
     }
     &__link {
-      padding: 1rem;
+      padding: .75rem;
     }
     &__btn {
       display: block;
