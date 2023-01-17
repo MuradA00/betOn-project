@@ -9,6 +9,7 @@
   top: 0;
   z-index: 10000;
   transition: all 400ms ease;
+  transition-delay: 350ms;
   opacity: 0;
   transform: translateX(100%);
   &__container {
@@ -37,10 +38,11 @@
   }
   &__close {
     position: absolute;
-    right: rem(22);
-    top: rem(22);
+    right: rem(16);
+    top: rem(12);
     width: 2rem;
     height: 2rem;
+    transition: all 400ms ease;
     &::before, &::after {
       position: absolute;
       left: 15px;

@@ -1,11 +1,27 @@
-
-
 @font-face {
   font-family: 'Jet-Set';
   src: url('../../fonts/Jet Set.woff');
   src: local('Jet-Set'), local('Jet-Set'),
        url('../../fonts/Jet-Set.woff') format('woff'),
        url('../../fonts/Jet Set.ttf') format('truetype');
+       font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Reload-Alt';
+  src: url('../../fonts/reloadaltcyrilicbystelorq_bold.woff');
+  src: local('Reload-Alt'), local('Reload-Alt'),
+       url('../../fonts/reloadaltcyrilicbystelorq_bold.woff') format('woff'),
+       url('../../fonts/reloadaltcyrilicbystelorq_bold.otf') format('opentype');
+       font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Hisqaida';
+  src: url('../../fonts/hisqaida2018_bold.woff');
+  src: local('Hisqaida'), local('Hisqaida'),
+       url('../../fonts/hisqaida2018_bold.woff') format('woff'),
+       url('../../fonts/hisqaida2018_bold.ttf') format('truetype');
        font-weight: normal;
 }
 

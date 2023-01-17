@@ -29,14 +29,13 @@
     text-transform: uppercase;
     font-size: rem(24);
     font-weight: 600;
-    margin-bottom: 1rem;
   }
   &__heading {
     color: var(--clr-red-400);
     font-weight: 800;
     text-transform: uppercase;
     font-size: rem(60);
-    margin-bottom: rem(28);
+    margin-bottom: rem(16);
   }
   &__action {
     font-weight: 600;
@@ -55,6 +54,7 @@
       font-weight: 600;
       font-size: rem(17);
       &:nth-child(2) {
+        font-family: 'Reload-Alt';
         font-size: rem(20);
         font-weight: 800;
       }
@@ -78,7 +78,7 @@
   &__grid-info {
     span {
       display: block;
-      margin-top: rem(5);
+      font-family: 'Reload-Alt';
     }
   }
   &__grid-icon {

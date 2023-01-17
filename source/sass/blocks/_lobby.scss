@@ -458,6 +458,11 @@
     &__pannel {
       padding: 1rem;
     }
+    &__message-input {
+      textarea {
+        padding: 1rem;
+      }
+    }
     &__flex-message {
       padding: 1rem;
     }

@@ -22,9 +22,15 @@
       display: flex;
       align-items: center;
       padding: 0 rem(49) 0 rem(53);
+      background-image: url('../../img/profile/user-wallet-bg.png');
+      background-position: left bottom;
+      background-repeat: no-repeat;
     }
     &_user {
       @include df;
+      background-image: url('../../img/profile/user-block-bg.png');
+      background-repeat: no-repeat;
+      background-position: right;
     }
   }
   &__grid {
@@ -284,6 +290,9 @@
     border-radius: 50%;
     background-color: #16182e;
     position: relative;
+    background-image: url('../../img/profile/winrate-percent.png');
+    background-size: contain;
+    background-position: center;
   }
   &__user-name {
     color: var(--clr-red-400);
@@ -356,6 +365,7 @@
     &__inner-block_user {
       flex-direction: column;
       grid-gap: rem(20);
+      background-position: bottom bottom;
     }
     &__heading-row {
       flex-direction: column;
