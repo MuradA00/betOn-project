@@ -16,6 +16,24 @@
     padding: rem(39);
     border-radius: 20px;
   }
+  &__denied,
+  .wallet__suc,
+  .wallet__processing {
+    display: flex;
+    align-items: center;
+    grid-gap: rem(9);
+  }
+  &__denied {
+    color: #dd243e;
+  }
+  &__processing {
+    // grid-gap: rem(5) !important;
+    color: #515262;
+    img {
+      flex: 0 0 auto;
+    }
+  }
+
   &__table-heading {
     display: flex;
     padding: 0 rem(17);
@@ -25,13 +43,14 @@
   }
   &__suc {
     color: #60bd14;
+    flex: 0 0 rem(95);
   }
   &__table-heading-item {
     color: #7c7d8e;
     font-size: 12px;
     font-weight: 500;
     &:nth-child(1) {
-      flex: 0 0 rem(85);
+      flex: 0 0 rem(110);
     }
     &:nth-child(2) {
       flex: 0 0 rem(120);
@@ -53,8 +72,15 @@
       background-color: #202135;
     }
     span {
+      &:nth-child(1) {
+        flex: 0 0 rem(116);
+      }
       &:nth-child(2) {
         flex: 0 0 rem(120);
+        text-align: center;
+      }
+      &:nth-child(3) {
+        flex: 0 0 rem(85);
         text-align: center;
       }
     }
@@ -191,6 +217,12 @@
 
 @include max-width(50em) {
   .wallet {
+    &__update {
+      padding: 1rem;
+    }
+    &__table {
+      padding: 1rem;
+    }
     &__heading {
       flex-direction: column;
       grid-gap: 1rem;
@@ -206,6 +238,70 @@
       grid-gap: 1rem;
       align-items: center;
       text-align: center;
+    }
+    &__table-inner-item {
+      span {
+        font-size: rem(10);
+        &:nth-child(1) {
+          flex: 0 0 rem(90);
+        }
+        &:nth-child(2) {
+          flex: 0 0 rem(100);
+        }
+      }
+    }
+    &__table-heading-item {
+      font-size: rem(10);
+      &:nth-child(1) {
+        flex: 0 0 rem(90);
+      }
+      &:nth-child(2) {
+        flex: 0 0 rem(100);
+      }
+      &:nth-child(5) {
+        flex: 0 0 rem(80);
+      }
+    }
+  }
+}
+
+@include max-width(37.5em) {
+  .wallet {
+    &__table {
+      display: flex;
+    }
+    &__table-inner {
+      display: flex;
+      overflow-y: scroll;
+    }
+    &__table-heading {
+      padding: rem(5);
+      margin-right: rem(20);
+      width: fit-content;
+      flex-direction: column;
+      margin-bottom: 0;
+    }
+    &__table-heading-item {
+      text-align: center;
+      flex: 0 0 auto !important;
+    }
+    &__table-inner-item {
+      padding: rem(5);
+      flex-direction: column;
+      grid-gap: 2rem;
+      span {
+        flex: 0 0 auto !important;
+        text-align: center;
+      }
+    }
+    &__processing,
+    .wallet__suc,
+    .wallet__denied {
+      flex-direction: column;
+      font-size: rem(8) !important;
+      img {
+        display: none;
+      }
     }
   }
 }
