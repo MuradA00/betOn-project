@@ -58,6 +58,17 @@
     padding: rem(27) rem(30) rem(25) rem(30);
     @include df;
     grid-gap: rem(21);
+    transition: all 400ms ease;
+    outline: 3px solid #202237;
+    &:hover {
+        outline: 3px solid #cf3c3e;
+    }
+    &:hover .partners__offer-info {
+      color: #cf3c3e;
+      span {
+        color: var(--clr-light-400);
+      }
+    }
   }
   &__offer-icon {
     flex: 0 0 auto;
@@ -65,7 +76,9 @@
   &__offer-info {
     font-weight: 700;
     font-size: rem(18);
+    transition: all 400ms ease;
     span {
+      transition: inherit;
       margin-top: rem(6);
       display: block;
       color: #8e91a7;
@@ -92,6 +105,7 @@
       margin: 0;
       border: none;
       outline: none;
+      font-weight: 500;
       color: var(--clr-light-400);
       font-size: rem(14);
       &::placeholder {
@@ -203,6 +217,14 @@
     }
     &__inner {
       padding: 2.875rem 1.2525rem 2.0625rem 1.25rem;
+    }
+    &__inputs-item {
+
+      &:not(:last-child) {
+        padding: .75rem;
+        display: flex;
+        align-items: center;
+      }
     }
   }
 }
