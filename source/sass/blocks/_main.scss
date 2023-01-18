@@ -279,6 +279,10 @@
     &__grid-item {
       max-width: rem(375);
       margin-inline: auto;
+      &::after {
+        bottom: rem(75);
+        background-size: 100% 100%;
+      }
     }
     &__grid-inner {
       margin-bottom: rem(25);

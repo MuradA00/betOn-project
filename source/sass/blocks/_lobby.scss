@@ -1,39 +1,34 @@
 .lobby {
   background-color: var(--clr-light-400);
   height: 100%;
+  background-image: url('../../img/main/main-overlay.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: relative;
+  &::before {
+    @include psevdo;
+    top: 0;
+    width: 100%;
+    height: rem(535);
+    background-image: url('../../img/main/main-pseudo-overlay.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
   &__container {
+    position: relative;
+    z-index: 10;
     padding: 2.625rem 2.9375rem 2.5rem;
     @include max-width(62.5em) {
       padding: rem(30) rem(16) rem(30);
     }
   }
   &__row-icon {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    &::before, &::after {
-      @include psevdo;
-      width: 40%;
-      height: rem(2);
-      background-color: var(--clr-red-400);
-      top: -5px;
-    }
-    &::before {
-      left: 0;
-    }
-    &::after {
-      right: 0;
-    }
-    span {
-      top: -8px;
-      position: absolute;
-      display: block;
-      width: rem(6);
-      height: rem(6);
-      border-radius: 2px;
-      background-color: var(--clr-red-400);
-    }
+    position: absolute;
+    left: 50%;
+    width: rem(96);
+    top: -14px;
+    transform: translateX(-50%);
   }
   &__title {
     color: #24263c;
@@ -120,7 +115,6 @@
     font-weight: 500;
   }
   &__team {
-
     position: relative;
     z-index: 15;
     &_tt {
@@ -157,15 +151,17 @@
     grid-gap: rem(30);
   }
   &__row-item {
-    overflow: hidden;
+    position: relative;
     width: rem(117);
     height: rem(123);
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    grid-gap: rem(8);
     justify-content: center;
     align-items: center;
     text-align: center;
     border-radius: 25px;
-    background-color: #1f2034;
+    background-image: linear-gradient(to top, #1b1c2e 0%, #202136 100%);
   }
   &__result {
     position: relative;
@@ -326,11 +322,12 @@
     &__heading {
       justify-content: flex-start;
       flex-direction: column;
-      grid-gap: 1.5rem;
+      grid-gap: 1rem;
     }
     &__options {
       justify-content: space-between;
       width: 100%;
+      grid-gap: 1rem !important;
     }
     &__title, .lobby__options {
       margin-right: auto;
@@ -348,6 +345,9 @@
     &__row-item {
       width: rem(90);
       height: rem(100);
+    }
+    &__row-icon {
+      width: rem(70);
     }
     &__row-image {
       width: fit-content;
@@ -386,6 +386,9 @@
 @include max-width(37.5em) {
   .lobby {
     &__inner {
+      display: flex;
+      flex-direction: column;
+      grid-gap: 3rem;
       background-position: center;
     }
     &__title {
@@ -398,11 +401,6 @@
       flex-direction: column;
       justify-content: flex-start;
       grid-gap: 1.5rem;
-    }
-    &__inner {
-      display: flex;
-      flex-direction: column;
-      grid-gap: 4rem;
     }
     &__team {
       &_tt {
