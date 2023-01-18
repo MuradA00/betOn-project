@@ -18,11 +18,20 @@
 
 @font-face {
   font-family: 'Hisqaida';
-  src: url('../../fonts/hisqaida2018_bold.woff');
+  src: url('../../fonts/ofont.ru_Hisqaida.woff');
   src: local('Hisqaida'), local('Hisqaida'),
-       url('../../fonts/hisqaida2018_bold.woff') format('woff'),
+       url('../../fonts/ofont.ru_Hisqaida.woff') format('woff'),
        url('../../fonts/hisqaida2018_bold.ttf') format('truetype');
        font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Intro';
+  src: url('../../fonts/IntroDemoCond-BlackCAPS.woff');
+  src: local('Intro'), local('Intro'),
+       url('../../fonts/IntroDemoCond-BlackCAPS.woff') format('woff'),
+       url('../../fonts/IntroDemoCond-BlackCAPS.otf') format('opentype');
+       font-weight: 900;
 }
 
 @font-face {

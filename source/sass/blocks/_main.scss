@@ -6,8 +6,20 @@
   background-repeat: no-repeat;
   // background-position: 100%;
   background-size: cover;
+  position: relative;
+  &::before {
+    @include psevdo;
+    top: 0;
+    width: 100%;
+    height: rem(535);
+    background-image: url('../../img/main/main-pseudo-overlay.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
   &__container {
     padding: rem(48) rem(47) rem(43);
+    position: relative;
+    z-index: 10;
   }
   &__poster {
     border-radius: 25px;
@@ -31,11 +43,16 @@
     font-weight: 600;
   }
   &__heading {
+    font-family: 'Hisqaida';
     color: var(--clr-red-400);
     font-weight: 800;
     text-transform: uppercase;
     font-size: rem(60);
     margin-bottom: rem(16);
+    text-shadow: 0 4px 0 rgba(48, 14, 14, 0.21);
+    span {
+      font-family: 'Geometria';
+    }
   }
   &__action {
     font-weight: 600;
@@ -127,17 +144,25 @@
     background-position: center;
     padding: rem(27) rem(24) rem(23);
     position: relative;
-    overflow: hidden;
-    // &::before {
-    //   @include psevdo;
-    //   top: 0;
-    //   border-radius: 25px 25px 0px 0px;
-    //   left: 0;
-    //   width: 100%;
-    //   margin: -2px -2px 0px -2px;
-    //   box-shadow: inset 0px 1px 5px #000;
-    //   height: rem(80);
-    // }
+    &::before {
+      @include psevdo;
+      bottom: -51px;
+      height: rem(51);
+      background-image: url('../../img/main/main-block-shadow.png');
+      width: 100%;
+      background-size: 100% 100%;
+      left: 0;
+    }
+    &::after {
+      @include psevdo;
+      bottom: rem(85);
+      left: 0;
+      width: 100%;
+      background-image: url('../../img/main/inner-block-shadow.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: rem(50);
+    }
   }
   &__row {
     display: flex;
