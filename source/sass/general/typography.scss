@@ -11,8 +11,9 @@
 @include max-width(81.25em) {
   .main-title {
     grid-gap: rem(8);
+    font-size: rem(16) !important;
     span {
-      font-size: rem(14);
+      font-size: rem(16);
     }
   }
 }

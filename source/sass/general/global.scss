@@ -14,6 +14,7 @@ body {
   flex-direction: column;
   overflow-x: hidden;
   position: relative;
+  transition: none;
   &::before {
     @include psevdo;
     top: 0;

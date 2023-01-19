@@ -9,8 +9,8 @@
   top: 0;
   z-index: 10000;
   transition: all 400ms ease;
-  transition-delay: 350ms;
-  opacity: 0;
+  transition-delay: 300ms;
+  // opacity: 0;
   transform: translateX(100%);
   overflow-y: scroll;
   &__container {

@@ -383,6 +383,20 @@
   }
 }
 
+@include max-width(43.75em) {
+  .lobby {
+    &__mode {
+      font-size: rem(16);
+      align-items: center;
+      span {
+        font-size: inherit;
+        width: rem(40);
+        height: rem(30);
+      }
+    }
+  }
+}
+
 @include max-width(37.5em) {
   .lobby {
     &__inner {

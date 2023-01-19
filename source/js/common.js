@@ -1,3 +1,4 @@
+
 const header = document.querySelector('.header'),
       sidebar = document.querySelector('.sidebar'),
       footer = document.querySelector('.footer'),
@@ -9,12 +10,19 @@ const header = document.querySelector('.header'),
       body = document.querySelector('.grid-wrapper__content'),
       wrapper = document.body;
 
+AOS.init({
+  once: true,
+  disable: function() {
+    const aosMedia = 650;
+    return window.innerWidth < aosMedia
+  }
+});
+
+
 function setHeadersPosition() {
   const sidebarWidth = sidebar.clientWidth;
   const headerHeight = header.clientHeight;
-
   content.style.marginTop = `${headerHeight}px`;
-
   if (sidebar) {
     getComputedStyle(sidebar).position === 'fixed' ? header.style.width = '100%' : header.style.width = `calc(100% - ${sidebarWidth}px)`;
   }
