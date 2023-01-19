@@ -95,6 +95,9 @@ html {
   }
   &__inner {
     flex: 1;
+    @include max-width(56.25em) {
+      margin-top: rem(48);
+    }
   }
   // &_partners {
   //   .nav {
