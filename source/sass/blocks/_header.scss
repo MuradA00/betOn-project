@@ -11,6 +11,8 @@
     display: none;
     align-items: center;
     min-height: rem(80);
+    position: relative;
+    z-index: 10;
   }
   &__lang {
     cursor: pointer;

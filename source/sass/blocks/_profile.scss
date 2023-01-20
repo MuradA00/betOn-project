@@ -44,9 +44,6 @@
     grid-gap: rem(37);
   }
   &__info-block {
-    &_height {
-
-    }
   }
   &__register-inner {
     max-height: rem(330);
@@ -206,7 +203,7 @@
   }
   &__table {
     background-color: #1d1e31;
-    padding: rem(37);
+    padding: rem(37) rem(37) 0;
     border-radius: 20px;
     overflow-y: scroll;
     max-height: rem(320);
