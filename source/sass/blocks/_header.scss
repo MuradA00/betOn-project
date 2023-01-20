@@ -32,12 +32,15 @@
     margin-right: rem(15);
   }
   &__user {
+    box-shadow: 0 0 35px rgba(16, 17, 30, 0.29);
     cursor: pointer;
     min-width: rem(190);
     min-height: inherit;
     @include dfc;
     grid-gap: 1rem;
-    background-color: #2c2e41;
+    position: relative;
+    z-index: 50;
+    background-color: #2e3043
   }
   &__user-name {
     font-size: rem(14);
@@ -84,6 +87,11 @@
   &__register {
     @include dfc;
     grid-gap: rem(17);
+  }
+  &__register-btn {
+    &_login {
+      background-color: #3b3c4d;
+    }
   }
 }
 

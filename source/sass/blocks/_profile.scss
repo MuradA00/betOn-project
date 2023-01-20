@@ -10,6 +10,10 @@
   &__first-title {
     margin-bottom: rem(34);
   }
+  &__inner {
+    max-height: rem(215);
+    overflow-y: scroll;
+  }
   &__inner-block {
     background-color: #16182e;
     border-radius: 20px;

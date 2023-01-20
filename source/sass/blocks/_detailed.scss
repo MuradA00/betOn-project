@@ -16,6 +16,10 @@
     border-radius: 20px;
     background-color: #16182e;
   }
+  &__table-inner {
+    max-height: rem(150);
+    overflow-y: scroll;
+  }
   &__inner-heading {
     margin-bottom: rem(30);
   }
@@ -82,11 +86,10 @@
   &__flex {
     display: flex;
     grid-gap: rem(37);
+    max-height: rem(360);
   }
   &__flex-item {
     flex: 1;
-    max-height: rem(365);
-    overflow-y: scroll;
   }
   &__flex-title {
     margin-bottom: rem(35);
@@ -113,7 +116,6 @@
     display: flex;
     flex-direction: column;
     grid-gap: rem(11);
-    overflow-y: scroll;
   }
   &__request-item {
     background-color: #1d1e31;
@@ -202,6 +204,8 @@
   }
   &__request {
     position: relative;
+    max-height: rem(240);
+    overflow-y: scroll;
     &::before {
       @include psevdo;
       top: 0;
@@ -226,6 +230,7 @@
     }
     &__flex {
       flex-direction: column;
+      max-height: 100%;
     }
   }
 }

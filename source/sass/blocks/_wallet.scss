@@ -16,6 +16,10 @@
     padding: rem(39);
     border-radius: 20px;
   }
+  &__table-inner {
+    max-height: rem(660);
+    overflow-y: scroll;
+  }
   &__denied,
   .wallet__suc,
   .wallet__processing {

@@ -9,6 +9,9 @@
   &__container {
     padding: rem(41) 0 rem(30);
     overflow-y: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
   &__logo {
     display: block;

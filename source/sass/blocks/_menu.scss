@@ -38,6 +38,9 @@
   .header__register {
     display: flex;
   }
+  .header__user {
+    border-radius: 12px !important;
+  }
   &__close {
     position: absolute;
     right: rem(16);
