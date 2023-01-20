@@ -211,11 +211,11 @@ input[type="number"] {
 
 * {
   scrollbar-color: #EDF3F6;
-
   &::-webkit-scrollbar {
     width: 6px;
     box-shadow: none;
     height: 36px;
+    display: none;
   }
 
   &::-webkit-scrollbar-thumb {
