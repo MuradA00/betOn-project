@@ -1,4 +1,5 @@
 .profile {
+  height: 100%;
   &_flex {
     @include df;
     justify-content: space-between;
@@ -291,9 +292,53 @@
     border-radius: 50%;
     background-color: #16182e;
     position: relative;
-    background-image: url('../../img/profile/winrate-percent.png');
-    background-size: contain;
-    background-position: center;
+  }
+  &__graph-overlay {
+    position: relative;
+    width: rem(100);
+    height: rem(100);
+    border-radius: 50%;
+    background-color: #1a192e;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    overflow: hidden;
+    z-index: 5;
+    &::before {
+      @include psevdo;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 85%;
+      height: 85%;
+      background-color: #1a192e;
+      z-index: 10;
+      border-radius: 50%;
+    }
+    &::after {
+      @include psevdo;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      width: 4px;
+      height: 100%;
+      background-color: #1a192e;
+      z-index: 10;
+    }
+  }
+  &__graph-win {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    background-image: linear-gradient(-35deg, #67850d 0%, #89c130 100%);
+  }
+  &__graph-defeat {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    background-image: linear-gradient(-35deg, #cd373a 0%, #e9623e 100%);
   }
   &__user-name {
     color: var(--clr-red-400);
@@ -326,6 +371,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 10;
   }
 }
 
@@ -416,6 +462,15 @@
     &__steam {
       font-size: rem(14);
       margin-bottom: rem(10);
+    }
+  }
+}
+
+@include max-width(22.5em) {
+  .profile {
+    &__user-info {
+      flex-direction: column;
+      text-align: center;
     }
   }
 }

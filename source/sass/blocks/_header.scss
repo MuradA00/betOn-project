@@ -17,6 +17,12 @@
   &__lang {
     cursor: pointer;
     margin-right: rem(36);
+    position: relative;
+    &:hover .header-langs {
+      transform: translateX(-50%) translateY(0px);
+      opacity: 1;
+      pointer-events: auto;
+    }
     &:hover .header__arrow {
       transform: scaleY(-1);
     }
@@ -93,6 +99,42 @@
   &__register-btn {
     &_login {
       background-color: #3b3c4d;
+    }
+  }
+}
+
+.header-langs {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 1000;
+  // margin-top: 1rem;
+  top: 100%;
+  left: calc(50% - 4px);
+  width: calc(100% + 4px);
+  background-color: #15172d;
+  transform: translateX(-50%) translateY(10px);
+  transition: all 400ms ease;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  &__lang-text {
+    font-size: .6875rem;
+    font-weight: 700;
+  }
+  &__flag {
+    flex: 0 0 auto;
+    max-width: rem(20);
+  }
+  &__item {
+    padding: rem(7) rem(5);
+    transition: all 300ms ease;
+    grid-gap: .5625rem;
+    display: flex;
+    align-items: center;
+    &:hover {
+      background-color: var(--clr-red-400);
     }
   }
 }

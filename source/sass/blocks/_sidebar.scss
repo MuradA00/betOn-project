@@ -154,6 +154,10 @@
     grid-gap: rem(14);
     border-radius: 20px;
     background-color: #212238;
+    transition: all 400ms cubic-bezier(0.19, 1, 0.22, 1);
+    &:hover {
+      transform: scale(1.04);
+    }
   }
   &__anti-hack-inner {
     font-size: 1rem;
