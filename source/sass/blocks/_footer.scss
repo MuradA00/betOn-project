@@ -11,6 +11,10 @@
   &__dev-logo {
     @include df;
     grid-gap: rem(9);
+    transition: all 300ms ease;
+    &:hover {
+      transform: scale(1.05);
+    }
     img {
       width: rem(38);
       height: rem(38);
