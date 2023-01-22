@@ -9,7 +9,23 @@
     justify-content: space-between;
   }
   &__dev-logo {
-    max-width: rem(166);
+    @include df;
+    grid-gap: rem(9);
+    img {
+      width: rem(38);
+      height: rem(38);
+    }
+  }
+  &__dev-descr {
+    color: #c4c8d2;
+    text-align: right;
+    font-weight: 500;
+    font-size: rem(12);
+    span {
+      font-weight: inherit;
+      text-transform: uppercase;
+      display: block;
+    }
   }
   &__copy {
     font-weight: 700;
